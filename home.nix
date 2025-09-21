@@ -112,7 +112,7 @@
   };
 
 
-
+  programs.obs-studio.enable = true;
   programs.lazygit.enable = true;
   programs.neovim.enable = true;
 
@@ -125,6 +125,7 @@
     nvim.enable = true;
     zsh-syntax-highlighting.enable = true;
     lazygit.enable = true;
+    obs.enable = true;
   };
 
 
