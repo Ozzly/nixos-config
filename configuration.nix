@@ -167,6 +167,7 @@
 
 
   programs.thunar.enable = true;
+  programs.adb.enable = true;
 
 
   programs.steam = {
