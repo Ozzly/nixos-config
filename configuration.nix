@@ -110,7 +110,12 @@
     phinger-cursors
 
     gimp
+
+    scrcpy
   ];
+
+  services.gvfs.enable = true;
+  programs.localsend.enable = true;
 
 
   # Enabling the thumbnailer
