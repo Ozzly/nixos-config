@@ -44,10 +44,11 @@
         "$mod, RETURN, exec, $terminal"
         "$mod, F, fullscreen, "
         "$mod, /, exit, "
-        "$mod, P, togglefloating, "
+        "$mod, N, togglefloating, "
+        "$mod, M, centerwindow, "
         "$mod, T, togglesplit, "
         "$mod, A, exec, grim -g \"$(slurp -w 0)\" - | swappy -f - "
-	"$mod, M, exec, hyprlock"
+	"$mod, R, exec, hyprlock"
 
 	"$mod, V, exec, $HOME/scripts/rofi-password.sh"
 	"$mod, C, exec, $HOME/scripts/catmarks/catmarks.sh"
