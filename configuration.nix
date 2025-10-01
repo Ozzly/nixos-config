@@ -99,19 +99,15 @@
     tree
     gdk-pixbuf # Thumbnailer
     libnotify # Notifications
-
     imagemagick # Convert image filetypes
-
     unzip
     qbittorrent
     brave
     vlc
-
     phinger-cursors
-
     gimp
-
     scrcpy
+    kdePackages.kdenlive
   ];
 
   services.gvfs.enable = true;
