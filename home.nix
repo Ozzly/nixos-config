@@ -5,6 +5,7 @@
     ./hyprland.nix
     ./librewolf.nix
     ./hyprpaper.nix
+    #./nvf.nix
   ];
 
   home.username = "syl";
@@ -72,9 +73,8 @@
 
   programs.hyprlock.enable = true;
 
-
   programs.freetube = {
-    enable = true;	
+    enable = false;	
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";
@@ -122,7 +122,7 @@
     vesktop.enable = true;
     dunst.enable = true;
     hyprlock.enable = true;
-    nvim.enable = true;
+    # nvim.enable = true;
     zsh-syntax-highlighting.enable = true;
     lazygit.enable = true;
     obs.enable = true;

@@ -18,18 +18,7 @@
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-
-      configModule = {
-        config.vim = { 
-	  theme.enable = true; 
-	};
-      };
-
-      customNeovim = nvf.lib.neovimConfiguration {
-        inherit pkgs;
-	modules = [configModule];
-      };
+      pkgs = nixpkgs.legacyPackages.${system}; 
     in {
 
     nixosConfigurations = {
@@ -43,9 +32,9 @@
       syl = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ 
+          nvf.homeManagerModules.default
 	  ./home.nix
 	  catppuccin.homeModules.catppuccin
-	  {home.packages = [customNeovim.neovim];}
 	];
       };
     };

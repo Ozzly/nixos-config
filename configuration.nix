@@ -108,6 +108,8 @@
     gimp
     scrcpy
     kdePackages.kdenlive
+    ripgrep
+    postman
   ];
 
   services.gvfs.enable = true;
