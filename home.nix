@@ -74,7 +74,7 @@
   programs.hyprlock.enable = true;
 
   programs.freetube = {
-    enable = false;	
+    enable = false;
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";

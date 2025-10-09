@@ -109,7 +109,7 @@
     scrcpy
     kdePackages.kdenlive
     ripgrep
-    postman
+    caligula
   ];
 
   services.gvfs.enable = true;
