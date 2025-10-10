@@ -95,6 +95,11 @@
 
   programs.vesktop = {
     enable = true;
+    vencord.settings.plugins = {
+        VolumeBooster.enabled = true;
+        VolumeBooster.multiplier = 3;
+        MessageLogger.enabled = true;
+      };
   };
 
   
