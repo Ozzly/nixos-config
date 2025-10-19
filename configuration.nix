@@ -83,7 +83,7 @@
   programs.thunar.enable = true;
   programs.adb.enable = true;
   programs.steam.enable = true;
-
+
   # Enabling the thumbnailer
   environment.pathsToLink = [ "share/thumbnailers" ];
 
