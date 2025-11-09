@@ -67,9 +67,15 @@
     theme = "/home/syl/.dotfiles/rofi.rasi";
   };
   
-  services.dunst.enable = true; 
-  services.mako.enable = true;
 
+  services.mako = {
+      enable = true;
+      settings = {
+        border-radius = 8;
+        default-timeout = 4000;
+        };
+    };
+  
 
   programs.hyprlock.enable = true;
 
@@ -125,7 +131,7 @@
     tmux.enable = true;
     alacritty.enable = true;
     vesktop.enable = true;
-    dunst.enable = true;
+    mako.enable = true;
     hyprlock.enable = true;
     # nvim.enable = true;
     zsh-syntax-highlighting.enable = true;
