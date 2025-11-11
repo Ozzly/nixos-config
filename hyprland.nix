@@ -21,8 +21,8 @@
       ];
 
       exec-once = [
-        "hyprpaper"
-	"$HOME/scripts/random_wallpaper.sh"
+        "$HOME/scripts/random_wallpaper.sh"
+        "$HOME/scripts/repeat_alarm.sh 15 'Posture Check'"
       ];
 
       cursor = {
