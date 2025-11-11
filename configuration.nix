@@ -74,6 +74,7 @@
     kdePackages.kdenlive
     ripgrep
     caligula
+    zoxide
   ];
 
   services.printing.enable = true;
