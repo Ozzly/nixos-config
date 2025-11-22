@@ -22,7 +22,7 @@
 
       exec-once = [
         "$HOME/scripts/random_wallpaper.sh"
-        "$HOME/scripts/repeat_alarm.sh 15 'Posture Check'"
+        "$HOME/scripts/repeat_alarm.sh 30 'Posture Check'"
       ];
 
       cursor = {

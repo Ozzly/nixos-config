@@ -75,10 +75,11 @@
     ripgrep
     caligula
     zoxide
+    anki
   ];
 
   services.printing.enable = true;
-  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.enable = false;
   services.gvfs.enable = true;
   programs.localsend.enable = true;
   programs.thunar.enable = true;
