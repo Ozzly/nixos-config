@@ -79,6 +79,8 @@
     ffmpeg
     unrar
     p7zip
+    swaybg
+    swaylock-effects
   ];
 
   services.printing.enable = true;
@@ -99,11 +101,12 @@
   };
 
   # Hyprland
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
+  #programs.hyprland = {
+  #  enable = true;
+  #  withUWSM = true;
+  #  xwayland.enable = true;
+  #};
+  programs.niri.enable = true;
 
   # Git
   programs.git = {
