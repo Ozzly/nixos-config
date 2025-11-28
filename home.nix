@@ -2,9 +2,9 @@
 
 {
   imports = [
-    ./hyprland.nix
+    #./hyprland.nix
+    ./niri/niri.nix
     ./librewolf.nix
-    ./hyprpaper.nix
     #./nvf.nix
   ];
 
@@ -69,7 +69,7 @@
   
 
   services.mako = {
-      enable = true;
+      enable = false;
       settings = {
         border-radius = 8;
         default-timeout = 4000;
@@ -80,7 +80,7 @@
   programs.hyprlock.enable = true;
 
   programs.freetube = {
-    enable = false; 
+    enable = true; 
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";

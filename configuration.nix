@@ -76,10 +76,13 @@
     caligula
     zoxide
     anki
+    ffmpeg
+    unrar
+    p7zip
   ];
 
   services.printing.enable = true;
-  services.mullvad-vpn.enable = false;
+  services.mullvad-vpn.enable = true;
   services.gvfs.enable = true;
   programs.localsend.enable = true;
   programs.thunar.enable = true;
