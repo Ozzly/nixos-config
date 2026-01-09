@@ -38,7 +38,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "syl";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -81,6 +81,22 @@
     p7zip
     swaybg
     swaylock-effects
+    xwayland-satellite
+    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gtk
+    texliveFull
+    system-config-printer
+    libreoffice
+    javaPackages.compiler.openjdk21
+    mpd
+    tutanota-desktop
+    fastfetch
+    pacman
+    melonDS
+    heroic
+    nautilus
+    gvfs
+    android-tools
   ];
 
   services.printing.enable = true;
@@ -88,7 +104,6 @@
   services.gvfs.enable = true;
   programs.localsend.enable = true;
   programs.thunar.enable = true;
-  programs.adb.enable = true;
   programs.steam.enable = true;
 
   # Enabling the thumbnailer
@@ -148,6 +163,11 @@
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = false;
+
+  virtualisation.docker = {
+      enable = true;
+    };
+
 
 
   system.stateVersion = "24.11"; 

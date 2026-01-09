@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-  niri
+  #niri
   ];
   xdg.configFile."niri/config.kdl".source = ./config.kdl;
 

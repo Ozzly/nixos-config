@@ -6,6 +6,8 @@
     ./niri/niri.nix
     ./librewolf.nix
     #./nvf.nix
+    ./rmpc.nix
+    ./mpd.nix
   ];
 
   home.username = "syl";
@@ -80,7 +82,7 @@
   programs.hyprlock.enable = true;
 
   programs.freetube = {
-    enable = true; 
+    enable = false; 
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";
