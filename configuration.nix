@@ -44,7 +44,6 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
-    vesktop
     kitty
     pass
     grim
@@ -71,7 +70,7 @@
     vlc
     gimp
     scrcpy
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     ripgrep
     caligula
     zoxide
@@ -92,12 +91,19 @@
     tutanota-desktop
     fastfetch
     pacman
-    melonDS
+    melonds
     heroic
     nautilus
     gvfs
     android-tools
+    glfw
+    libxtst
+    whatsapp-electron
+    rose-pine-cursor
+    catppuccin-gtk
+    firefox
   ];
+
 
   services.printing.enable = true;
   services.mullvad-vpn.enable = true;
@@ -164,9 +170,15 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.open = false;
 
-  virtualisation.docker = {
-      enable = true;
-    };
+  virtualisation =  { 
+    docker.enable = true;
+    # waydroid.enable = true;
+  };
+
+  services.flatpak.enable = true;
+
+ 
+
 
 
 

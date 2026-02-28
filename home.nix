@@ -78,6 +78,7 @@
         };
     };
   
+ # options.gtk.cursorTheme.name = "rose-pine";
 
   programs.hyprlock.enable = true;
 

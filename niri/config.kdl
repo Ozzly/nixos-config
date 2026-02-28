@@ -6,7 +6,7 @@ input {
             layout "gb"
             options "caps:swapescape"
           }
-        numlock
+     
     }
 
     touchpad {
