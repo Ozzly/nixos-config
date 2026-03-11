@@ -38,7 +38,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "syl";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ];
   };
 
   environment.systemPackages = with pkgs; [
