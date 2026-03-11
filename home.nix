@@ -50,7 +50,8 @@
       "vi" = "nvim";
     };
 
-    initContent = "bindkey '^f' autosuggest-accept"; 
+    initContent = "bindkey '^f' autosuggest-accept";
+
     envExtra = ''
       export CODESTATS_API_KEY="$(cat $HOME/.dotfiles/secrets/codestats.key)"
     '';
