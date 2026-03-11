@@ -196,6 +196,19 @@
   };
 
 
+systemd.user.services.new-tab-httpd = {
+    Unit = {
+      Description = "BusyBox HTTP server for custom new tab";
+    };
+    Service = {
+      ExecStart = "${pkgs.busybox}/bin/httpd -f -p 127.0.0.1:8787 -h /home/syl/code/new-tab";
+      Restart = "on-failure";
+      RestartSec = 2;
+    };
+    Install.WantedBy = [ "default.target" ];
+  };
+
+
 
   #home.file.".config/hypr/hyprland.conf".text = '' '' or .source = ./hyprland.conf;
 
