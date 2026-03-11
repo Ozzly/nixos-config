@@ -50,7 +50,8 @@
     slurp
     swappy
     gnupg
-    pinentry-tty
+    # pinentry-tty
+    pinentry-qt
     wl-clipboard
     prismlauncher
     rofi
@@ -70,7 +71,7 @@
     vlc
     gimp
     scrcpy
-    # kdePackages.kdenlive
+    kdePackages.kdenlive
     ripgrep
     caligula
     zoxide
@@ -102,6 +103,9 @@
     rose-pine-cursor
     catppuccin-gtk
     firefox
+    yazi
+    btop
+    busybox
   ];
 
 
