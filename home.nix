@@ -51,7 +51,24 @@
     };
 
     initContent = "bindkey '^f' autosuggest-accept"; 
+    envExtra = ''
+      export CODESTATS_API_KEY="$(cat $HOME/.dotfiles/secrets/codestats.key)"
+    '';
+
     syntaxHighlighting.enable = true;
+
+    plugins = [
+      {
+        name = "code-stats-zsh";
+        src = pkgs.fetchFromGitLab {
+            owner = "code-stats";
+            repo = "code-stats-zsh";
+            rev = "50a38ee55ce47b205325d5b64b9e42d2a39b1ebe";
+            sha256 = "sha256-W1dEH2Nb/EbFgtFedvDpddEkaM+rpwA1Da1klCQ7CkM=";
+        };
+      }
+    ];
+    
   };
 
 
