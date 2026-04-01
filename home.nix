@@ -101,7 +101,7 @@
   programs.hyprlock.enable = true;
 
   programs.freetube = {
-    enable = false; 
+    enable = true; 
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";
@@ -144,7 +144,7 @@
   };
 
 
-  programs.obs-studio.enable = true;
+  # programs.obs-studio.enable = true;
   programs.lazygit.enable = true;
   programs.neovim.enable = true;
 

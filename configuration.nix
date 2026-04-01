@@ -106,7 +106,16 @@
     yazi
     btop
     busybox
+    python313
+    platformio
+    gcc
+    bat
+    unityhub
+    dotnet-sdk
+    libfido2
   ];
+
+  programs.nix-ld.enable = true;
 
 
   services.printing.enable = true;
