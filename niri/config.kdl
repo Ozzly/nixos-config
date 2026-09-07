@@ -26,7 +26,7 @@ input {
 
 
 // Monitors
-output "DP-1" {
+output "DP-3" {
     mode "2560x1440@164.835"
     scale 1
     transform "normal"
@@ -134,7 +134,7 @@ window-rule {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: Rofi" { spawn-sh "rofi -show drun"; }
     Mod+V { spawn-sh "$HOME/scripts/rofi-password.sh"; }
     Mod+X { spawn-sh "$HOME/code/catmarks/catmarks.sh"; }

@@ -24,6 +24,7 @@
 	"font.name.monospace.x-western" = "JetBrainsMono Nerd Font";
 	"font.cjk_pref_fallback_order" = "ja,zh-cn,zh-hk,zh-tw,ko";
       };
+      extensions.force = true;
 
       
 

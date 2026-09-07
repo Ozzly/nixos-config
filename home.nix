@@ -72,6 +72,7 @@
     
   };
 
+  nixpkgs.config.allowUnfree = true;
 
   # Anki
   programs.anki = {
@@ -101,7 +102,7 @@
   programs.hyprlock.enable = true;
 
   programs.freetube = {
-    enable = true; 
+    enable = true;
     settings = {
       defaultQuality = "1440";
       baseTheme = "catppuccinMocha";
@@ -115,6 +116,13 @@
     };
   };
 
+  programs.concord.enable = true;
+
+  programs.kitty.enable = true;
+  programs.kitty.font = {
+    package = pkgs.nerd-fonts.jetbrains-mono;
+    name = "JetBrains Mono Nerd";
+  };
 
   programs.alacritty = {
     enable = true;
@@ -146,18 +154,30 @@
 
   # programs.obs-studio.enable = true;
   programs.lazygit.enable = true;
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    withRuby = false;
+    withPython3 = false;
+  };
+
+  programs.lutris.enable = true;
+
+  # catppuccin.autoEnable = true;
+  # catppuccin.enable = true;
 
   catppuccin = {
-    tmux.enable = true;
-    alacritty.enable = true;
-    vesktop.enable = true;
-    mako.enable = true;
-    hyprlock.enable = true;
+	autoEnable = true;
+	enable = true;
+	rofi.enable = false;
+    # tmux.enable = true;
+    # alacritty.enable = true;
+    # vesktop.enable = true;
+    # mako.enable = true;
+    # hyprlock.enable = true;
     # nvim.enable = true;
-    zsh-syntax-highlighting.enable = true;
-    lazygit.enable = true;
-    obs.enable = true;
+    # zsh-syntax-highlighting.enable = true;
+    # lazygit.enable = true;
+    # obs.enable = true;
   };
 
 
@@ -196,6 +216,10 @@
     };
   };
 
+  programs.helix = {
+    enable = true;
+  };
+
 
 systemd.user.services.new-tab-httpd = {
     Unit = {
@@ -212,6 +236,5 @@ systemd.user.services.new-tab-httpd = {
 
 
   #home.file.".config/hypr/hyprland.conf".text = '' '' or .source = ./hyprland.conf;
-
   programs.home-manager.enable = true;
 }

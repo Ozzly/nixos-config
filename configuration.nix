@@ -100,18 +100,40 @@
     libxtst
     whatsapp-electron
     rose-pine-cursor
-    catppuccin-gtk
+    # catppuccin-gtk
     firefox
     yazi
     btop
     busybox
     python313
+    python313Packages.pytest
     platformio
     gcc
     bat
     unityhub
     dotnet-sdk
     libfido2
+    doxygen
+    aseprite
+    smartmontools
+    qdiskinfo
+    blanket
+    craftos-pc
+    vscode
+    tuxedo
+    bash-language-server
+    clang-tools
+    vscode-langservers-extracted
+    #tailwindcss-language-server
+    #docker-language-server
+    nil
+    nixpkgs-fmt
+    #svelte-language-server
+    #typescript-language-server
+    termusic
+    yt-dlp
+    dig
+    discordo
   ];
 
   programs.nix-ld.enable = true;
@@ -140,7 +162,18 @@
   #  xwayland.enable = true;
   #};
   programs.niri.enable = true;
-
+  stylix.enable = true;
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  stylix.fonts = {
+    monospace = {
+      package = pkgs.nerd-fonts.jetbrains-mono;
+      name = "JetBrains Mono Nerd";
+    };
+    serif = config.stylix.fonts.monospace;
+    sansSerif = config.stylix.fonts.monospace;
+    emoji = config.stylix.fonts.monospace;
+  };
+  
   # Git
   programs.git = {
     enable = true;
@@ -179,9 +212,9 @@
   
   # Enable nvidia driver
   hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  # services.xserver.videoDrivers = [ "nvidia" ];
+  # hardware.nvidia.open = false;
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
 
   virtualisation =  { 
     docker.enable = true;

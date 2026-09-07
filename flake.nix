@@ -5,7 +5,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     catppuccin.url = "github:catppuccin/nix";
-    nvf.url = "github:notashelf/nvf";
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,7 +18,7 @@
   };
 
   
-  outputs = { self, nixpkgs, catppuccin, home-manager, nvf, ... }:
+  outputs = { self, nixpkgs, catppuccin, stylix, home-manager, ... }:
     let 
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -24,7 +28,10 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ 
+	  stylix.nixosModules.stylix
+	  ./configuration.nix
+	];
       };
     };
 
@@ -32,7 +39,6 @@
       syl = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ 
-          nvf.homeManagerModules.default
 	  ./home.nix
 	  catppuccin.homeModules.catppuccin
 	];
