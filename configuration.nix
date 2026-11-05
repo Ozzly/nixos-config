@@ -120,24 +120,24 @@
     blanket
     craftos-pc
     vscode
-    tuxedo
     bash-language-server
     clang-tools
-    vscode-langservers-extracted
-    #tailwindcss-language-server
     #docker-language-server
     nil
     nixpkgs-fmt
-    #svelte-language-server
-    #typescript-language-server
     termusic
     yt-dlp
     dig
     discordo
+    openapi-tui
+    youtube-tui
+    mpv
+    kdePackages.okular
+    readest
+    devenv
   ];
 
   programs.nix-ld.enable = true;
-
 
   services.printing.enable = true;
   services.mullvad-vpn.enable = true;
@@ -212,9 +212,9 @@
   
   # Enable nvidia driver
   hardware.graphics.enable = true;
-  # services.xserver.videoDrivers = [ "nvidia" ];
-  # hardware.nvidia.open = false;
-  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.open = false;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
 
   virtualisation =  { 
     docker.enable = true;
