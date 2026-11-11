@@ -66,7 +66,7 @@
     imagemagick # Convert image filetypes
     unzip
     qbittorrent
-    brave
+    # brave-origin
     vlc
     gimp
     scrcpy
@@ -129,7 +129,6 @@
     yt-dlp
     dig
     discordo
-    openapi-tui
     youtube-tui
     mpv
     kdePackages.okular
