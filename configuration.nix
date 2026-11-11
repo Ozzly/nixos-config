@@ -135,6 +135,7 @@
     kdePackages.okular
     readest
     devenv
+    (callPackage ./helium.nix { })
   ];
 
   programs.nix-ld.enable = true;
